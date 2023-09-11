@@ -7,10 +7,13 @@ namespace Spriggit.CLI.Commands;
 public class DeserializeCommand
 {
     [Option('i', "InputPath", HelpText = "Path to the Bethesda plugin as its text representation", Required = true)]
-    public string InputPath { get; set; } = string.Empty;
+    public DirectoryPath InputPath { get; set; } = string.Empty;
     
-    [Option('o', "OutputPath", HelpText = "File export mod as its Bethesda plugin representation", Required = true)]
+    [Option('o', "OutputPath", HelpText = "File to export mod as its Bethesda plugin representation")]
     public FilePath OutputPath { get; set; } = string.Empty;
+
+    [Option('d', "OutputDir", HelpText = "Directory to export mod as its Bethesda plugin representation")]
+    public DirectoryPath OutputDir { get; set; } = string.Empty;
 
     [Option('p', "PackageName",
         HelpText = "Spriggit serialization nuget package to use for conversion",

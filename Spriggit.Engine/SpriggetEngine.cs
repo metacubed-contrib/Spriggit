@@ -55,7 +55,7 @@ public class SpriggitEngine(
     }
 
     public async Task Deserialize(
-        string spriggitPluginPath, 
+        DirectoryPath spriggitPluginPath, 
         FilePath outputFile,
         SpriggitSource? source,
         CancellationToken cancel)
